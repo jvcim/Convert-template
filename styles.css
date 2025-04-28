@@ -1,3 +1,4 @@
+/* Reset e configurações iniciais */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
   font-size: 16px;
 }
 
+/* Estilização da barra de rolagem */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -21,6 +23,7 @@
   background-color: #2f3279;
 }
 
+/* Estilização do body */
 body {
   width: 100%;
   height: 100vh;
@@ -38,14 +41,15 @@ body {
   color: #f1f2f6;
 }
 
+/* Estilização do main */
 main {
   width: 480px;
   border-radius: 1.5rem;
-
   border: 1px solid #2f3279;
   overflow-y: hidden;
 }
 
+/* Estilização do form */
 form {
   background-color: #141534;
 
@@ -102,6 +106,7 @@ select:focus {
   border: 1px solid #4a5dcd;
 }
 
+/* Estilização do botão */
 button {
   height: 3.25rem;
 
@@ -130,21 +135,23 @@ button:focus {
   outline: 1.5px solid #4a5dcd;
 }
 
+/* Estilização do footer */
 footer {
   background-color: #1f2151;
   padding: 2.5rem;
   max-height: 196px;
 
   text-align: center;
-  display: none;
-
+  display: none; /* Começa escondido */
   overflow-y: scroll;
 }
 
+/* Mostra o footer quando tem resultado */
 .show-result {
   display: block;
 }
 
+/* Estilização da descrição da taxa */
 footer span {
   color: #7d8dec;
   font-size: 1rem;
@@ -153,10 +160,35 @@ footer span {
   line-height: 1.25rem;
 }
 
+/* Estilização do valor convertido */
 footer h1 {
   color: #f1f2f6;
   font-weight: 700;
   font-size: 2rem;
   line-height: 3rem;
-  word-break: break-all;
+  word-break: break-word;
+}
+
+/* Estilização da mensagem de erro */
+#error-message {
+  color: #ff4d4f;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+/* Animação suave no footer */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-footer {
+  animation: fadeInUp 0.5s ease forwards;
 }
